@@ -33,10 +33,6 @@ const diffAttrs = (oldAttrs, newAttrs) => {
 const diffChildren = (oldVChildren, newVChildren) => {
     const childPatches = [];
 
-    if (newVChildren.length === 2 && oldVChildren.length === 4) {
-        debugger;
-    }
-
     oldVChildren.forEach((oldVChild, i) => {
         childPatches.push(diff(oldVChild, newVChildren[i]));
     });
